@@ -1,4 +1,11 @@
 # ETL_Challenge
+It all began when a group of 4 decided to create an analysis that shows the best most authentic, affordable and comfortable Airbnb places around New York City. As a start, we will submit a proposal of what we will be doing to be able to collect the data.
+* We are building an ETL pipeline that will extract the data from csv files, transform it and load it into a relational database.
+  * Extract: get the data from the original source mentioned in the proposal.
+  * Transform: making sure the data is database ready by addressing any anomalies.
+  * Load: push the curated data into the respective database.
+### We Watch Out For Your Comfort!
+-------------------------------------------------------------
 ## Proposal
 ### No fear, we are hear!
 * Our two data sets are from Meven Analytics and Kaggle and are concerning Airbnb listings across the world.
@@ -7,14 +14,14 @@
 * The reason we decided to use SQL in this case is because our data is in the form of structured datasets and is strictly text.
 * This means that there would be no advantage of using a NoSQL database such as mongo DB as they excel in storing a multitude of different data types such as text, image audio etc.
 * To summarise our findings, we removed unnecessary columns, removed all entries outside of New York, made sure the neighbourhoods matched before renaming the columns and loading the data into PostgreSQL.
-
+-------------------------------------------------------------
 ## Report
 ### Sources
 * https://www.mavenanalytics.io/data-playground?page=3
 * https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data?resource=download
 
 ### Extract:
-We used two datasets in this project where one was taken from Kaggle and the other from Maven Analytics and both where in the form of csv files. The dataset from Kaggle originally had 16 columns and the Maven dataset had 32. Both files were opened in a Jupyter notebook using Pandas.
+* We used two datasets in this project where one was taken from Kaggle and the other from Maven Analytics and both where in the form of csv files. The dataset from Kaggle originally had 16 columns and the Maven dataset had 32. Both files were opened in a Jupyter notebook using Pandas.
 
 ### Transform:
 * The first step in the transformation process, is removing all the columns that were unnecessary and kept the key columns such as those related to the location, price and review scores.
@@ -27,3 +34,6 @@ We used two datasets in this project where one was taken from Kaggle and the oth
 * First, we created the database in Postgres as it’s a structured database engine. Then we created the two fact tables based on the final datasets created in the transform phase. We matched the column names as per the datasets and set the data types accordingly. 
 * In Jupyter notebook, we’ve created a connection with the Postgres engine to be able to push the data to the respective tables. And finally ran the code and checked that the data is available in the database created.
 * A relational database was chosen as our data is in the form of structured data and is strictly text, and we need a simple model to be created. In addition, it is perfect for normalization process with easy access to data through SQL query
+
+### FAQs
+* What is ETL? ETL tools enable data integration strategies by allowing companies to gather data from multiple data sources and consolidate it into a single, centralized location.
