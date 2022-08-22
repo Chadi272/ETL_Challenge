@@ -1,5 +1,5 @@
 # ETL_Challenge
-It all began when a group of 4 decided to create an analysis that shows the best most authentic, affordable and comfortable Airbnb places around New York City. As a start, we will submit a proposal of what we will be doing to be able to collect the data.
+It all began when a group of 4 decided to create an analysis that shows the best most authentic, affordable and comfortable Airbnb places around New York City. The project was a result of combined work together as one. As a start, we will submit a proposal of what we will be doing to be able to collect the data.
 * We are building an ETL pipeline that will extract the data from csv files, transform it and load it into a relational database.
   * Extract: get the data from the original source mentioned in the proposal.
   * Transform: making sure the data is database ready by addressing any anomalies.
